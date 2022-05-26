@@ -5,6 +5,7 @@ class BookTableViewController: UITableViewController {
     
     struct PropertyKeys {
         static let bookCell = "BookCell"
+        static let customBookCell = "BookTableViewCell"
         static let addBookSegue = "AddBook"
         static let editBookSegue = "EditBook"
     }
@@ -27,6 +28,11 @@ class BookTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        books.remove(at: indexPath.row)
+        tableView.reloadData()
+    }
+    
     
     // MARK: - Table view data source
     
@@ -35,13 +41,20 @@ class BookTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.bookCell, for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.bookCell, for: indexPath)
+//
+//        let book = books[indexPath.row]
+//        cell.textLabel?.text = book.title
+//        cell.textAuthorLabel?.text = book.title
+//        cell.detailTextLabel?.text = book.description
         
-        let book = books[indexPath.row]
-        cell.textLabel?.text = book.title
-        cell.detailTextLabel?.text = book.description
+        if let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.customBookCell, for: indexPath) as? BookTableViewCell {
+            let bookCell = books[indexPath.row]
+            cell.updateBookCell(book: bookCell)
+            return cell
+        }
         
-        return cell
+        return BookTableViewCell()
     }
     
     // MARK: - Navigation

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CCA89B2283E860100657C00 /* BookFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA89B1283E860100657C00 /* BookFormTableViewController.swift */; };
+		0CCA89B728400AE900657C00 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA89B628400AE900657C00 /* BookTableViewCell.swift */; };
 		2C5E3E1A1E514CC400C02C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E191E514CC400C02C5F /* AppDelegate.swift */; };
 		2C5E3E1F1E514CC400C02C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E3E1D1E514CC400C02C5F /* Main.storyboard */; };
 		2C5E3E211E514CC400C02C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E3E201E514CC400C02C5F /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0CCA89B1283E860100657C00 /* BookFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFormTableViewController.swift; sourceTree = "<group>"; };
+		0CCA89B628400AE900657C00 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		2C5E3E161E514CC400C02C5F /* FavoriteBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5E3E191E514CC400C02C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C5E3E1E1E514CC400C02C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		0CCA89B5283E862A00657C00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0CCA89B628400AE900657C00 /* BookTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				2C5E3E341E514EA700C02C5F /* BookTableViewController.swift in Sources */,
 				2C5E3E1A1E514CC400C02C5F /* AppDelegate.swift in Sources */,
+				0CCA89B728400AE900657C00 /* BookTableViewCell.swift in Sources */,
 				0CCA89B2283E860100657C00 /* BookFormTableViewController.swift in Sources */,
 				2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */,
 				2C5E3E2C1E514CE500C02C5F /* Book.swift in Sources */,
